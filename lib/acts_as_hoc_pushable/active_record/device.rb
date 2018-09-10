@@ -11,7 +11,7 @@ module ActsAsHocPushable
 
     scope :active, -> { where(invalidated_at: nil, active: true) }
     scope :ios, -> { where(platform: "ios") }
-    scope :android, -> { where(platform: "ios") }
+    scope :android, -> { where(platform: "android") }
 
     default_scope { active }
 
